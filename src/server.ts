@@ -8,7 +8,7 @@ class Server {
         this.mountRoutes();
     }
 
-    private mountRoutes(): void {
+    private mountRoutes = () => {
         const router = express.Router();
         router.get('/', (req, res) => {
             res.json({
@@ -16,7 +16,7 @@ class Server {
             });
         });
         this.express.use('/', router);
-    }
+    };
 }
 
 export default new Server().express;
