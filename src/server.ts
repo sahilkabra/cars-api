@@ -10,9 +10,9 @@ class Server {
 
     private mountRoutes = () => {
         const router = express.Router();
-        router.get('/', (req, res) => {
+        router.get('/hello', (req, res) => {
             res.json({
-                message: 'Hello World!',
+                message: 'Hello there!',
             });
         });
         this.express.use('/', router);
