@@ -3,7 +3,7 @@
         "allowJs": true,
         "baseUrl": ".",
         "forceConsistentCasingInFileNames": true,
-        "lib": ["es6"],
+        "lib": ["es6", "es2015"],
         "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitAny": true,

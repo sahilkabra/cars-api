@@ -1,22 +1,15 @@
+import * as bodyParser from 'body-parser';
 import * as express from 'express';
+import { Router } from './router';
 
 class Server {
     public express: express.Express;
 
     constructor() {
         this.express = express();
-        this.mountRoutes();
+        this.express.use(bodyParser.json());
+        this.express.use('/', Router);
     }
-
-    private mountRoutes = () => {
-        const router = express.Router();
-        router.get('/hello', (req, res) => {
-            res.json({
-                message: 'Hello there!',
-            });
-        });
-        this.express.use('/', router);
-    };
 }
 
 export default new Server().express;

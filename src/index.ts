@@ -1,12 +1,12 @@
+import config from './config';
+import './db/connection';
 import logger from './logger';
 import server from './server';
 
-const port = process.env.PORT || 9001;
-
-server.listen(port, (err: any) => {
+server.listen(config.express.port, (err: any) => {
     if (err) {
         return logger.error(err);
     }
 
-    return logger.info(`server is listening on ${port}`);
+    return logger.info(`server is listening on ${config.express.port}`);
 });

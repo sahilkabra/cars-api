@@ -1,4 +1,5 @@
 module.exports = {
+    coverageDirectory: 'out/coverage',
     roots: ['<rootDir>/src'],
     transform: {
         '^.+\\.ts$': 'ts-jest',
