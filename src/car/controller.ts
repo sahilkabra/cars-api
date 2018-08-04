@@ -1,3 +1,7 @@
+/**
+ * The controller.
+ * It gets params from the request and return response.
+ */
 import { Request, Response } from 'express';
 
 import logger from '../logger';

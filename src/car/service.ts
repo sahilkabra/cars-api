@@ -1,3 +1,6 @@
+/**
+ * Services related to cars.
+ */
 import logger from '../logger';
 import { Car, CarFilters, CarModel, CarSchema } from './model';
 import { carSchemaToModel, transformFilter } from './transformers';
