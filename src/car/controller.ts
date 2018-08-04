@@ -8,6 +8,7 @@ import logger from '../logger';
 import { Car } from './model';
 import * as CarService from './service';
 
+// TODO: validate request params and add tests for them
 export default {
     create: async (request: Request, response: Response) => {
         const cars: Car[] = [].concat(request.body);
@@ -23,6 +24,7 @@ export default {
         response.send(car);
     },
     getCars: async (request: Request, response: Response) => {
+        // TODO: Add support for pagination and sorting
         logger.debug(`retrieve car ${request.query}`);
         const cars = await CarService.findCars(request.query);
         response.send(cars);

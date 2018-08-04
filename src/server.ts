@@ -1,5 +1,7 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
+
+import { catchAllErrorHandler } from './errorHandlers';
 import { Router } from './router';
 
 class Server {
@@ -9,6 +11,7 @@ class Server {
         this.express = express();
         this.express.use(bodyParser.json());
         this.express.use('/', Router);
+        this.express.use('*', catchAllErrorHandler);
     }
 }
 
