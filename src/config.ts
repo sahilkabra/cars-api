@@ -15,12 +15,9 @@ const config = {
         pid: process.pid,
         port: process.env.MONGOPORT || 27017,
         url: () =>
-            'mongodb://' +
-            config.mongo.host +
-            ':' +
-            config.mongo.port +
-            '/' +
-            config.mongo.dbName,
+            `mongodb://${config.mongo.host}:${config.mongo.port}/${
+                config.mongo.dbName
+            }`,
     },
 };
 

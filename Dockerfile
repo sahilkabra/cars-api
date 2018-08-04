@@ -4,10 +4,11 @@ ENV PORT 9001
 
 EXPOSE 9001
 
-COPY package.json package.json
-RUN npm install
+WORKDIR /src
 
 COPY . .
+RUN npm install
+
 RUN npm run build
 
 CMD ["node", "dist/"]

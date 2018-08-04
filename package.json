@@ -32,8 +32,10 @@
     "build": "tsc",
     "clean": "rimraf out dist",
     "dev": "tsc --watch & nodemon dist",
-    "docker": "docker build -t cars-api .",
-    "docker:start": "docker run --rm -p 9001:9001 --name cars-api cars-api",
+    "docker": "npm run docker:build && docker-compose up -d",
+    "docker:build": "docker build -t cars-service .",
+    "docker:start": "docker run --rm -p 9001:9001 --name cars-service cars-service",
+    "docker:stop": "docker-compose down",
     "lint:dev": "tslint -p ./tsconfig.json",
     "start": "npm run dev",
     "test": "jest"
