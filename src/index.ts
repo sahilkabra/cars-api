@@ -1,7 +1,9 @@
 import config from './config';
-import './db/connection';
+import connection from './db/connection';
 import logger from './logger';
 import server from './server';
+
+connection.connectToMongo();
 
 server.listen(config.express.port, (err: any) => {
     if (err) {
