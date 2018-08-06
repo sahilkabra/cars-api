@@ -13,7 +13,7 @@ describe('carSchemaToModel', () => {
             id: carSchema._id,
             make: 'make',
             model: 'model',
-            url: `/car/${carSchema._id}`,
+            url: `/cars/${carSchema._id}`,
         };
 
         const actual = carSchemaToModel(carSchema);
