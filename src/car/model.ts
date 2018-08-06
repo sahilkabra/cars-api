@@ -27,7 +27,7 @@ const CarSchema: Schema = new Schema({
 });
 
 CarSchema.virtual('url').get(function(this: CarSchema) {
-    return `/car/${this._id}`;
+    return `/cars/${this._id}`;
 });
 
 export const CarModel: Model<CarSchema> = model<CarSchema>('car', CarSchema);
