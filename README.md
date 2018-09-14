@@ -11,11 +11,11 @@ A simple api to store/retrieve cars.
 
 #### Commands
 ##### QuickStart with docker
-(Note: Correct mount points for mongo db in docker-compose.yaml)
+(Note: Edit mount points for mongo db in docker-compose.yaml)
 1. `docker buld -t cars-service . && docker-compose up -d` to build and start the docker app
 1. `docker-compose down` to shutdown the docker app
 ##### QuickStart with npm
-(Note: Correct mount points for mongo db in docker-compose.yaml)
+(Note: Edit mount points for mongo db in docker-compose.yaml)
 1. `npm run docker` to start the app
 1. `npm run docker:stop` to shutdown the app
 

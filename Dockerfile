@@ -1,6 +1,7 @@
 FROM node:9
 
 ENV PORT 9001
+ENV NODE_ENV production
 
 EXPOSE 9001
 
