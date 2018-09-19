@@ -15,5 +15,13 @@
 
 # Node.js dependencies:
 node_modules/
-dist/
 tags
+src/
+jest*
+Dockerfile
+docker-compose.yml
+package-lock.json
+README.md
+tags*
+tsconfig.json
+tslint.json
